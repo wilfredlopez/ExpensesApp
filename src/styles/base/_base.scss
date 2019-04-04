@@ -1,0 +1,17 @@
+html{
+    font-size: 62.5%;
+}
+
+*{
+    font-size: $m-size;
+}
+
+
+h1{
+    font-size: 3rem;
+}
+
+.is-active{
+    font-weight: bold;
+    color:red !important;
+}
