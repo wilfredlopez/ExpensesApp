@@ -15,9 +15,11 @@ import {setTextFilter} from './actions/filters'
 
 const store = configureStore()
 
-store.dispatch(addExpense({description: 'Water Bill', amount: 150, createdAt: 100}))
-store.dispatch(addExpense({description: 'Gas Bill', amount: 200, createdAt: 150}))
-store.dispatch(addExpense({description: 'Washitong post', amount: 300, createdAt: 110}))
+
+//creating demo expenses
+// store.dispatch(addExpense({description: 'Water Bill', amount: 150, createdAt: 100}))
+// store.dispatch(addExpense({description: 'Gas Bill', amount: 200, createdAt: 150}))
+// store.dispatch(addExpense({description: 'Washitong post', amount: 300, createdAt: 110}))
 
 //filters
 //store.dispatch(setTextFilter('wa'))
