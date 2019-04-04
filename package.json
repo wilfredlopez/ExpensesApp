@@ -5,7 +5,9 @@
   "license": "MIT",
   "scripts": {
     "dev-server": "webpack-dev-server --env=development",
-    "build": "webpack"
+    "build:dev": "webpack",
+    "build:prod": "webpack -p --env production",
+    "serve": "live-server public/"
   },
   "dependencies": {
     "add": "^2.0.6",
@@ -23,7 +25,7 @@
     "normalize.css": "^8.0.1",
     "react": "^16.8.6",
     "react-addons-shallow-compare": "^15.6.2",
-    "react-dates": "12.7.0",
+    "react-dates": "^12.7.0",
     "react-dom": "^16.8.6",
     "react-modal": "^3.8.1",
     "react-redux": "^6.0.1",
@@ -37,6 +39,8 @@
     "webpack-cli": "^3.3.0",
     "webpack-dev-server": "^3.2.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "extract-text-webpack-plugin": "^4.0.0-beta.0"
+  },
   "author": "Wilfred Lopez"
 }
