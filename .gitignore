@@ -1,7 +1,4 @@
 node_modules/
 playground/
 Guide/
-public/scripts/importStyles.css
-public/scripts/importStyles.css.map
-public/scripts/app.js
-public/scripts/app.js.map
+public/dist
