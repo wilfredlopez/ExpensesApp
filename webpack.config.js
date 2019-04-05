@@ -11,8 +11,9 @@ module.exports = (env) => {
         return {
         entry: './src/app.js',
         output:{
-            path: path.join(__dirname,'public/scripts'),
-            filename:'app.js'
+            path: path.join(__dirname,'public/scripts/'),
+            filename:'app.js',
+            publicPath:'/public'
         },
         module:{
             rules:[{
