@@ -11,7 +11,7 @@ module.exports = (env) => {
         return {
         entry: './src/app.js',
         output:{
-            path: path.join(__dirname,'public','dist'),
+            path: path.join(__dirname,'public/scripts'),
             filename:'app.js'
         },
         module:{
@@ -46,7 +46,6 @@ module.exports = (env) => {
         devServer:{
             contentBase: path.join(__dirname,'public'),
             historyApiFallback: true,
-            publicPath:'/dist/'
         }
     }
 }
