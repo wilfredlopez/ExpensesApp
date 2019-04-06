@@ -14,7 +14,7 @@ import NotFoundPage from './../components/NotFoundPage'
 const AppRouter = ()=> (
     <BrowserRouter>
     <Menu/>
-    <div className="container-fluid justify-content-center">
+    <div className="">
     <Switch>
         <Route path="/" component={Dashboard} exact={true}/>
         <Route path="/help"  component={Help}/>

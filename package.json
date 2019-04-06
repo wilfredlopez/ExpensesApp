@@ -23,9 +23,11 @@
     "css-loader": "^2.1.1",
     "express": "^4.16.4",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "firebase": "4.2.0",
     "moment": "^2.24.0",
     "node-sass": "^4.11.0",
     "normalize.css": "^8.0.1",
+    "numeral": "^2.0.6",
     "react": "^16.8.6",
     "react-addons-shallow-compare": "^15.6.2",
     "react-dates": "^12.7.0",
@@ -34,6 +36,7 @@
     "react-redux": "^6.0.1",
     "react-router-dom": "^5.0.0",
     "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "uuid": "^3.3.2",
@@ -43,6 +46,8 @@
     "yarn.lock": "^0.0.1-security"
   },
   "devDependencies": {
+    "cross-env": "^5.2.0",
+    "dotenv": "^7.0.0",
     "live-server": "^1.2.1",
     "webpack-dev-server": "^3.2.1"
   },
