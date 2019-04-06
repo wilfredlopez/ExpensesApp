@@ -37,7 +37,7 @@ const getFromDatabase = database.ref('expenses').once('value',(snapshots) =>{
       startAddExpense(expense)
     })
 
-    console.log(expenses)
+    // console.log(expenses)
     return expenses
 
 })

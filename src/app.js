@@ -16,10 +16,9 @@ import getVisibleExpenses from './selectors/expenses'
 import {setTextFilter} from './actions/filters'
 
 
-//database
+//database Get //my way of doing it.
 import './firebase/firebase'
 import {getFromDatabase} from './firebase/firebase'
-
 
 getFromDatabase.then((snapshots) =>{
     snapshots.forEach((expense) => {
@@ -27,6 +26,8 @@ getFromDatabase.then((snapshots) =>{
         store.dispatch(addExpense({...expense.val()}))
     })
 })
+
+
 
 
 const store = configureStore()
@@ -45,7 +46,7 @@ const store = configureStore()
 const state = store.getState()
 const visibleExpenses = getVisibleExpenses(state.expenses, state.filters)
 
-console.log(visibleExpenses)
+// console.log(visibleExpenses)
 
 
 //console.log(store.getState())
@@ -59,8 +60,20 @@ const jsx = (
     </Provider>
     
 )
-ReactDOM.render(jsx, document.getElementById('app'))
-//ReactDOM.render(<Menu />,document.getElementById('menu')) //my custom navbar
+
+
+//Andrew's way of doing it
+import {startSetExpenses} from './actions/expenses'
+
+ReactDOM.render(<p>Loading</p>, document.getElementById('app'))
+
+store.dispatch(startSetExpenses()).then(()=>{
+    ReactDOM.render(jsx, document.getElementById('app'))
+})
+
+// //my way of doing it
+// ReactDOM.render(jsx, document.getElementById('app'))
+
 
 
 

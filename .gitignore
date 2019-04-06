@@ -2,3 +2,4 @@ node_modules/
 playground/
 Guide/
 .env.development
+.env_Info-For-Prod

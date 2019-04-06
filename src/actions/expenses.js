@@ -2,10 +2,6 @@ import uuid from 'uuid'
 import database  from '../firebase/firebase'
 //module to allow redux to dispatch a function | yarn add redux-thunk
 
-
-
-
-
 //add expense
 // export const addExpense = (
 //     {
@@ -56,3 +52,26 @@ export const editExpense = (id, updates) =>({
     id,
     updates
 })
+
+//set expenses
+export const setExpenses = (expenses) =>{
+    type:'SET_EXPENSES',
+    expenses
+}
+
+export const startSetExpenses = () =>{
+    return (dispatch) => {
+           return database.ref('expenses').once('value').then((snapshots) =>{
+            const expenses = []
+        
+            snapshots.forEach(expense => {
+                expenses.push({
+                    id:expense.key,
+                    ...expense.val()
+                })
+            })
+        
+        })
+        dispatch(setExpenses(expenses))
+    }
+}
