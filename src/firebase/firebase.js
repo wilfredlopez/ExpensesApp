@@ -19,10 +19,6 @@ var config = {
 const database = firebase.database()
 
 
-
-
-
-
 const getFromDatabase = database.ref('expenses').once('value',(snapshots) =>{
     const expenses = []
 

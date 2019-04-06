@@ -18,14 +18,14 @@ import {setTextFilter} from './actions/filters'
 
 //database Get //my way of doing it.
 import './firebase/firebase'
-import {getFromDatabase} from './firebase/firebase'
+// import {getFromDatabase} from './firebase/firebase'
 
-getFromDatabase.then((snapshots) =>{
-    snapshots.forEach((expense) => {
-        //console.log(expense.key, expense.val())
-        store.dispatch(addExpense({...expense.val()}))
-    })
-})
+// getFromDatabase.then((snapshots) =>{
+//     snapshots.forEach((expense) => {
+//         //console.log(expense.key, expense.val())
+//         store.dispatch(addExpense({...expense.val()}))
+//     })
+// })
 
 
 
