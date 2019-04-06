@@ -20,7 +20,6 @@ import {setTextFilter} from './actions/filters'
 import './firebase/firebase'
 import {getFromDatabase} from './firebase/firebase'
 
-const store = configureStore()
 
 getFromDatabase.then((snapshots) =>{
     snapshots.forEach((expense) => {
@@ -29,7 +28,8 @@ getFromDatabase.then((snapshots) =>{
     })
 })
 
-//console.log('existing:',getFromDatabase)
+
+const store = configureStore()
 
 
 
