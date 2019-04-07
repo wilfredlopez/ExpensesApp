@@ -11,7 +11,6 @@ export const Menu = (props) => {
     <NavLink className="navbar-brand bg-dark text-light pl-3" to="/dashboard">{props.title}</NavLink>
         <li className="nav-item ml-3"><NavLink to="/dashboard" activeClassName="is-active" exact={true} className="nav-link">Dashboard</NavLink></li>
         <li className="nav-item ml-3"><NavLink to="/create" activeClassName="is-active" className="nav-link">Add Expense</NavLink></li>
-        <li className="nav-item ml-3"><NavLink to="/help" activeClassName="is-active" className="nav-link">Help</NavLink></li>
        
 
         <div>{props.isAuthenticated &&  <button className="btn btn-danger ml-4"

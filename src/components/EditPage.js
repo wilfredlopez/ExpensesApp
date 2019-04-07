@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux';
 import ExpenseForm from './ExpenseForm'
-import {editExpense,startEditExpense, startRemoveExpense} from './../actions/expenses'
+import {startEditExpense, startRemoveExpense} from './../actions/expenses'
 
 
 export class EditPage extends React.Component {
@@ -17,7 +17,8 @@ export class EditPage extends React.Component {
             this.props.history.push('/dashboard')
     }
     render() {
-        return (<div>
+        return (<div className="container">
+        <h1>Edit Expense</h1>
         <ExpenseForm 
             expense={this.props.expense}
             onSubmit={this.onSubmit}
