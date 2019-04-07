@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom'
 import './styles/styles.scss' //for using scss
 import 'normalize.css/normalize.css' //yarn add normalize.css a library for reseting all the default css form the browser
 import AppRouter, {history} from './Routers/AppRouter'
+import {NavLink, Link } from 'react-router-dom' 
 
 //redux stuff
 import {Provider} from 'react-redux'
@@ -48,7 +49,9 @@ const renderApp = () =>{
 
 }
 
-// ReactDOM.render(<p>Loading</p>, document.getElementById('app'))
+import LoadingPage from './components/LoadingPage'
+
+ReactDOM.render(<LoadingPage/>, document.getElementById('app'))
 
 firebase.auth().onAuthStateChanged((user) =>{
     if(user){
@@ -64,11 +67,7 @@ firebase.auth().onAuthStateChanged((user) =>{
         console.log('Logout')
         renderApp()
         store.dispatch(logout())
-        history.push('/')
-        
-        
-        
-        
+        history.push('/') 
     }
 })
 

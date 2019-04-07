@@ -1,0 +1,20 @@
+.login{
+    // background: #6094cc;
+    background: url('/img/bg2.jpg');
+    background-size: cover;
+    background-blend-mode: darken(#000,.7);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login__box{
+    text-align: center;
+    line-height: 2.2rem;
+    background: fade-out($color: #fff, $amount: .10);
+    text-align: center;
+    border-radius: 3px;
+    padding: $xl-size $xl-size;
+}

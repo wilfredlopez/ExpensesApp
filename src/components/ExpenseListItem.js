@@ -6,15 +6,23 @@ import moment from 'moment'
 import numeral from 'numeral'
 
 const ExpenseListItem =  ({dispatch, id, description, amount, createdAt}) => (
-    <div key={id}>
-        <Link to={`/edit/${id}`}>
-            <h3 key={description}>{description}</h3>
+    <span  className="list-item">
+        <Link  className="list-item--link" to={`/edit/${id}`}>
+        <div>
+            <h3 className="list-item__title" key={description}>{description}</h3>
+        
+        <span key={amount}>  {moment(createdAt).format('MMM Do, YYYY')}   </span>
+        </div>
+        <h3>{numeral(amount / 100 ).format('$0,0.00')}</h3>
+
         </Link>
-        <p key={amount}>{numeral(amount / 100 ).format('$0,0.00')} - {moment(createdAt).format('MMM Do, YYYY')}</p>
-        <button key={createdAt}className="mb-3" onClick={(e)=>{
+        <div className="block-container">
+        <button className="button button--remove mb-3 ml-3" key={createdAt} onClick={(e)=>{
             dispatch(startRemoveExpense({id}))
         }}>Remove</button>
-    </div>
+        </div>
+        <hr/>
+        </span>
 );
 
 

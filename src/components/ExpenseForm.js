@@ -100,7 +100,7 @@ export default class ExpenseForm extends React.Component {
                     className="form-control"/>
                 </label>
             </div>
-                <button type="submit" className="btn btn-primary">Save Expense</button>
+                <button type="submit" className="btn btn-primary btn-lg">Save Expense</button>
             
             </form>
             </div>

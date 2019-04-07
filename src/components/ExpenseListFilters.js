@@ -22,10 +22,10 @@ class ExpenseListFilters extends React.Component {
     }
 
     render() {
-    return (<div id="expense-list" className="container">
+    return (<div id="expense-list" className="">
         <div className="row">
        <div className="col-12 py-2">
-       <div className="row justify-content-center">
+       <div className="row">
         
        <div className="col-12 col-md-4">
        <div className="d-flex">
@@ -46,9 +46,9 @@ class ExpenseListFilters extends React.Component {
        </div>
        </div>
        </div>
-       <div className="col-12 col-md-6">
-       <div className="d-flex justify-content-end">
-       <label className="input-group-text"><span className="px-sm-2">Date: </span></label>
+       <div className="col-12 col-md-8">
+       <div className="d-flex justify-content-start">
+       <label className="input-group-text"><span className="px-sm-2">From: </span></label>
        <DateRangePicker 
         startDate={this.props.filters.startDate}
         endDate={this.props.filters.endDate}
@@ -63,13 +63,14 @@ class ExpenseListFilters extends React.Component {
        </div></div>
       
       
-        <div className="col-12 col-md-10">
+        <div className="col-12 col-md-12">
        <div className="justify-content-start">
         <label htmlFor="search" className="input-group-text"><div className="d-inline pr-3">Search:</div>
         <input id="search" type="text" className="form-control" value={this.props.filters.text} onChange={(e)=>{
                 this.props.dispatch(setTextFilter(e.target.value))
             }} 
-        ></input></label>
+        ></input></label>    
+        
         </div>
        </div>
        </div>

@@ -23,7 +23,7 @@ export class EditPage extends React.Component {
             expense={this.props.expense}
             onSubmit={this.onSubmit}
         />
-        <button className="mb-3 btn btn-secondary" onClick={this.onRemove}>Remove</button>
+        <button className="mb-3 btn btn-secondary btn-lg mt-3" onClick={this.onRemove}>Remove Expense</button>
 
         <p>Editing ID: {this.props.match.params.id}</p>
     </div>)
