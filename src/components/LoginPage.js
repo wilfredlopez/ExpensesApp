@@ -8,7 +8,7 @@ export const LoginPage = ({startLogin}) => {
     return (
         <div className="login">
         <div className="row login__box">
-        <div className="col-12">
+        <div className="">
         <h1 className="display-2">Expenses</h1>
         <p>Keep track of your expenses.</p>
         <div>

@@ -10,13 +10,13 @@ const ExpensesSummary = (props) => {
 
     return(
 
-    <div className="">
+    <div className="list_bg">
     
         <div className="row text-center">
      
         <div className="col-12 col-sm-10 offset-sm-1 px-0">
        
-        <p className="badge">
+        <p className="">
         
         <span>Displaying: {props.expenses.length}. <span className="pl-1">Grand total of {amount}</span></span>
         

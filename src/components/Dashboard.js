@@ -6,7 +6,7 @@ import ExpensesSummary from './ExpensesSummary'
 
 
 const Dashboard = ()=> (
-    <div className="container-fluid">
+    <div className="">
     <h1 className="text-center">Dashboard</h1>
     <ExpenseListFilters/>
     <ExpensesSummary/>

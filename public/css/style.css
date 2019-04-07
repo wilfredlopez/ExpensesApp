@@ -12,7 +12,7 @@ input.form-control, textarea.form-control {
 }
 
 #expense-list select.form-control {
-    height: calc(4.25rem + 2px) !important;
+    height: 44px !important;
 }
 
 #expense-list .form-group {
@@ -31,7 +31,7 @@ input.form-control, textarea.form-control {
 }
 
 input#search {
-    height: 32px;
+    height: 35px;
 }
 
 .navbar-expand {
@@ -84,4 +84,16 @@ button.btn:hover {
 
 .DateRangePickerInput {
     margin-right: 2rem;
+}
+
+div#app {
+    max-width: 100%;
+}
+
+p > span, p span > * {
+    font-size: 20px;
+}
+
+body{
+    max-width: 100%;
 }

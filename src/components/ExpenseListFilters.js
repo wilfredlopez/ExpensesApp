@@ -22,7 +22,7 @@ class ExpenseListFilters extends React.Component {
     }
 
     render() {
-    return (<div id="expense-list" className="">
+    return (<div id="expense-list" className="bg-light">
         <div className="d-flex justify-content-around">
        <div className=" py-2">
        <div className="row">
