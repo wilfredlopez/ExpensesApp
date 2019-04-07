@@ -9,8 +9,6 @@ const Dashboard = ()=> (
     <div className="container-fluid">
     <h1 className="text-center">Dashboard</h1>
     <ExpenseListFilters/>
-
-       
     <ExpensesSummary/>
     <ExpenseList />
     </div>

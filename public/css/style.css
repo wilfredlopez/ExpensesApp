@@ -81,3 +81,7 @@ button.btn:hover {
     color: #fff;
     background: red;
 }
+
+.DateRangePickerInput {
+    margin-right: 2rem;
+}
