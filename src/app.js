@@ -4,7 +4,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import './styles/styles.scss' //for using scss
 import 'normalize.css/normalize.css' //yarn add normalize.css a library for reseting all the default css form the browser
-import AppRouter from './Routers/AppRouter'
+import AppRouter, {history} from './Routers/AppRouter'
 import moment from 'moment'
 
 //redux stuff
@@ -13,11 +13,12 @@ import configureStore from './store/configureStore'
 import {addExpense} from './actions/expenses'
 import {startAddExpense} from './actions/expenses'
 import getVisibleExpenses from './selectors/expenses'
-import {setTextFilter} from './actions/filters'
+import {login, logout} from './actions/auth'
+import {firebase} from './firebase/firebase'
 
 
 //database Get //my way of doing it.
-import './firebase/firebase'
+//import './firebase/firebase'
 // import {getFromDatabase} from './firebase/firebase'
 
 // getFromDatabase.then((snapshots) =>{
@@ -65,11 +66,41 @@ const jsx = (
 //Andrew's way of doing it
 import {startSetExpenses} from './actions/expenses'
 
+
+
+let hasRendered = false
+
+const renderApp = () =>{
+    if (!hasRendered){
+        store.dispatch(startSetExpenses()).then(()=>{
+            ReactDOM.render(jsx, document.getElementById('app'))
+            hasRendered = true
+        })   
+    }
+
+}
+
 ReactDOM.render(<p>Loading</p>, document.getElementById('app'))
 
-store.dispatch(startSetExpenses()).then(()=>{
-    ReactDOM.render(jsx, document.getElementById('app'))
+firebase.auth().onAuthStateChanged((user) =>{
+    if(user){
+        console.log(user.uid)
+        store.dispatch(login(user.uid))
+
+        renderApp() 
+        if(history.location.pathname === '/'){
+            history.push('/dashboard')
+        }
+        console.log("Logged in")
+    }else{
+        console.log('Logout')
+        store.dispatch(logout())
+        renderApp()
+        history.push('/')
+    }
 })
+
+
 
 // //my way of doing it
 // ReactDOM.render(jsx, document.getElementById('app'))

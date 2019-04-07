@@ -1,3 +1,30 @@
 .DateInput__display-text {
     padding: 0 !important;
 }
+
+.form-group > * {
+    font-size: 2rem;
+}
+
+#expense-list select.form-control {
+    height: calc(4.25rem + 2px) !important;
+}
+
+#expense-list .form-group {
+    display: contents;
+}
+
+/* .DateRangePickerInput > * {
+    margin: 0 !important;
+    padding:0 !important;
+} */
+
+.DateInput {
+
+    width: 95px !important;
+
+}
+
+input#search {
+    height: 32px;
+}

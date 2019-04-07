@@ -6,7 +6,6 @@ import getExpensesTotal from './../selectors/expenses-total'
 
 
 const ExpensesSummary = (props) => {
-    const isOne = props.expenses.length === 1
     const amount = numeral(getExpensesTotal(props.expenses)/100).format('$0,0.00')
 
     return(
@@ -14,8 +13,8 @@ const ExpensesSummary = (props) => {
     <div className="container">
         <div className="row text-center">
         <div className="col-12 col-sm-10 offset-sm-1 px-0">
-        <p className="badge"><span>Displaying: {props.expenses.length} expense{!isOne && <span>s</span> }</span>
-        <span className="pl-1">a grand total of {amount}</span>
+        <p className="badge"><span>Displaying: {props.expenses.length}. <span className="pl-1">Grand total of {amount}</span></span>
+        
         </p>
 
 

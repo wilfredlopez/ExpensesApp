@@ -17,7 +17,7 @@ var config = {
   firebase.initializeApp(config);
 
 const database = firebase.database()
-
+const googleAuthProvider = new firebase.auth.GoogleAuthProvider()
 
 const getFromDatabase = database.ref('expenses').once('value',(snapshots) =>{
     const expenses = []
@@ -38,7 +38,7 @@ const getFromDatabase = database.ref('expenses').once('value',(snapshots) =>{
 
 })
 
-export  {firebase, getFromDatabase, database as default}
+export  {firebase, getFromDatabase, googleAuthProvider, database as default}
 // const demoExpenses = {
 //     description:'Demo expenses',
 //     note:'',
