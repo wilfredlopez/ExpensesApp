@@ -91,9 +91,13 @@ div#app {
 }
 
 p > span, p span > * {
-    font-size: 20px;
+    font-size: 18px;
 }
 
 body{
     max-width: 100%;
+}
+
+.row.text-center {
+    margin-right: 0 !important;
 }
