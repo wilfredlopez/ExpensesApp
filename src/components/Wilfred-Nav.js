@@ -5,13 +5,13 @@ import { connect } from 'react-redux';
 
 //MY CUSTOM MENU
 export const Menu = (props) => {
-    return(<div id="wrapper">
+    return(<div id="menu-wrapper">
     <nav className="navbar-nav navbar-dark">
-    <ul className="navbar navbar-expand navbar-nav navbar-dark bg-dark">
-    <NavLink className="navbar-brand bg-dark text-light pl-3" to="/dashboard">{props.title}</NavLink>
+    <ul className="navbar navbar-expand navbar-nav bg-expense">
+    <NavLink className="navbar-brand bg-expense bg-expense__brand text-light pl-3" to="/dashboard">{props.title}</NavLink>
       
 
-        <div>{props.isAuthenticated &&  <button className="btn ml-4"
+        <div>{props.isAuthenticated &&  <button className="btn btn-light ml-4"
         onClick={props.signOut}>Logout</button>}</div>
     </ul>
     

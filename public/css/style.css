@@ -24,6 +24,8 @@ input.form-control, textarea.form-control {
     padding:0 !important;
 } */
 
+
+
 .DateInput {
 
     width: 90px !important;
@@ -57,12 +59,14 @@ background: transparent !important;
 
 a.btn.button {
     color: #fff;
-    background:#4088eee6;
+    /* background:#4088eee6; */
+    background: #2d5a84;
 }
 
 
-a.btn.button.mt-5:hover {
+a.btn.button:hover {
     color: #fff;
+    background: #517290;
 }
 
 
@@ -79,12 +83,62 @@ button.btn {
 }
 button.btn:hover {
     color: #fff;
-    background: red;
+    background: rgba(255, 64, 64, 0.7);
+}
+
+.button--remove{
+    background: #dc5c5c;
+    padding: .8rem;
 }
 
 .DateRangePickerInput {
     margin-right: 2rem;
+    width: 100%;
 }
+
+@media (max-width: 700px){
+    .sortBy {
+        width: 100%;
+    }
+    
+
+
+    .w-calendar {
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+
+
+}
+
+
+.w-lg-margin, .DateRangePicker {
+    margin-right: 2rem;
+}
+
+
+
+@media (max-width: 916px){
+
+    .w-lg-margin, .DateRangePicker {
+        margin-right: 0;
+    }
+    .search-container {
+        width: 100%;
+    }
+
+
+
+    .DateRangePicker {
+        width: 100%;
+    }
+
+
+}
+
+
 
 div#app {
     max-width: 100%;

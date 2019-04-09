@@ -25,13 +25,13 @@ class ExpenseListFilters extends React.Component {
     return (<div id="expense-list" className="bg-light">
         <div className="d-flex justify-content-around">
        <div className=" py-2">
-       <div className="row">
+       <div className="row justify-content-between">
         
-       <div className="">
+       <div className="sortBy">
        <div className="d-flex">
        <div className="form-group">
        <label htmlFor="filters" className="input-group-text">Sort By:</label>
-       <select className="form-control mr-3" value={this.props.filters.sortBy
+       <select className="form-control w-lg-margin" value={this.props.filters.sortBy
         } onChange={(e)=>{
             if(e.target.value === 'date'){
                 this.props.dispatch(sortByDate())
@@ -46,7 +46,7 @@ class ExpenseListFilters extends React.Component {
        </div>
        </div>
        </div>
-       <div className="">
+       <div className="w-calendar">
        <div className="d-flex justify-content-start">
        <label className="input-group-text"><span className="px-sm-2">From: </span></label>
        <DateRangePicker 
@@ -63,7 +63,7 @@ class ExpenseListFilters extends React.Component {
        </div></div>
       
       
-        <div className="">
+        <div className="search-container">
        <div className="justify-content-start">
         <label htmlFor="search" className="input-group-text"><div className="d-inline pr-3">Search:</div>
         <input id="search" type="text" className="form-control" value={this.props.filters.text} onChange={(e)=>{
